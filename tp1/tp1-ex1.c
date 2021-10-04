@@ -10,7 +10,7 @@ int main(int argc, char const *argv[])
 
 	printf("Input K:");
 	scanf("%u",&k);
-	
+
 	gmp_randstate_t rstate;
 	gmp_randinit_default(rstate);
 
@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
 	printf("Input seed:");
 	scanf("%lld",&seed);
 	gmp_randseed_ui(rstate,seed);
-    gmp_printf("Seed in state: %Zd",rstate->_mp_seed);
+	gmp_printf("Seed in state: %Zd",rstate->_mp_seed);
 
 	while (1) {
 		mpz_urandomb(n,rstate,k);
